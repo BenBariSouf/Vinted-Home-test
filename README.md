@@ -1,6 +1,6 @@
 # Vinted Home Assignment - Soufiane Ben Bari 
 
-images
+![Image 2024-08-08 at 00 18 08](https://github.com/user-attachments/assets/4eff0f0e-81fa-45bd-b1d8-4901996049ef)
 
 
 ## Features
