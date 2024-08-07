@@ -13,6 +13,9 @@ const Album: React.FC = () => {
     defaultValue: [],
   });
 
+  const options = { root: null, rootMargin: '30px', threshold: 0 };
+  const loaderRef = useInfiniteScroll(() => setPage(previous => previous + 1), options);
+
   const favourite = (id: string) => {
     const index = favourites.indexOf(id);
     const newFavourites = [...favourites];
@@ -38,6 +41,7 @@ const Album: React.FC = () => {
       </Grid>
       {error && <h4>Error loading data!</h4>}
       {loading && <Loader />}
+      <div ref={loaderRef} />
     </PhotoContainer>
   )
 }
