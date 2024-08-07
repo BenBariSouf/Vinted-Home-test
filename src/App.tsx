@@ -1,17 +1,19 @@
-import { UserCard } from "./sections/users/UserCard";
-import { useUsers } from "./sections/users/useUsers";
+import { GlobalStyle } from "./styles";
+
+import Album from './components/Album';
 
 export function App() {
-	const users = useUsers();
 
 	return (
 		<div className="App">
-			<h3>⚡⚛️ Vite React Best Practices Template (by Codely)</h3>
-			<h2>Current users</h2>
-
-			{users.map((user) => (
-				<UserCard key={user.name} user={user} />
-			))}
+			<GlobalStyle />
+			<h4>
+				Vinted Home Test. Made with ❤️ by{" "}
+				<a href="https://github.com/BenBariSouf" target="_blank">
+					Soufiane.
+				</a>
+			</h4>
+			<Album />
 		</div>
 	);
 }
