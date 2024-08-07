@@ -65,7 +65,7 @@ This project requires [node](http://nodejs.org) and [npm](https://npmjs.com) ins
 Clone the repository to a directory of your choosing
 
 ```sh
-git clone
+git clone https://github.com/BenBariSouf/Vinted-Home-test
 ```
 
 Install the project dependencies
@@ -100,4 +100,4 @@ npm test
 
 ## License
 
-[MIT]()
+[MIT](https://github.com/BenBariSouf/Vinted-Home-test/blob/main/LICENSE)
