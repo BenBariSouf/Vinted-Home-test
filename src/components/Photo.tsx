@@ -13,6 +13,7 @@ const Photo: React.FC<IPhoto> = ({ photo, isLiked, addToFavourites }) => {
   const photoRef = useRef<HTMLImageElement>(null);
 
   const thumbnailPhoto = getPhoto(photo, true);
+  const fullPhoto = getPhoto(photo, false);
 
   const fetchData = useCallback(async () => {
     await fetch(constructURL(null, owner))
@@ -25,6 +26,8 @@ const Photo: React.FC<IPhoto> = ({ photo, isLiked, addToFavourites }) => {
       )
   }, [owner]);
 
+  const options = { root: null, rootMargin: '30px', threshold: 0 };
+  useLazyLoad(photoRef, fullPhoto, options);
 
   useEffect(() => {
    catchErrors(fetchData());
